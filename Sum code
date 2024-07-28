@@ -1,0 +1,16 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Ramalishus");
+         System.out.println(sumFromTo(4 , 7));
+         System.out.print(sumFromTo(-3 , 1));
+         System.out.print(sumFromTo(9 , 9));
+    } 
+     public static int sumFromTo(int start, int end) {
+         int m = 0;
+         for (int i = start; i <= end; i++) {
+             m = m + i;
+         }
+         return m;
+         
+     }
+}
