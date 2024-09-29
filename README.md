@@ -3,7 +3,7 @@
 - 🌱 I’m currently learning fortnite
 - 💞️ I’m looking to collaborate on fortnite (username ramalishus)
 - 📫 How to reach me fortnite
-- 😄 Pronouns: What are pronouns are the food?
+- 😄 Pronouns: What are pronouns are they food?
 - ⚡ Fun fact: im so good at fortnite
 
 <!---
