@@ -87,7 +87,7 @@ public class PIDseam extends LinearOpMode {
 
 
     integError += propError * runtime.seconds();
-    double derivError = (propError - prevError) / runtime.seconds();
+    double derivError = (propError - prevError) / ElapsedTime.seconds();
     double error = (kp * propError) + (ki * integError) + (kd * derivError);
     runtime.reset();
     return error;
