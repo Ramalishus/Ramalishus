@@ -21,7 +21,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.util.ElapsedTime;
 
 
 
@@ -109,7 +109,6 @@ public class OmarCompition extends LinearOpMode {
              double proportionalError = target - current;
              intergral += proportionalError * currentTime;
              double derivative = (current - previous) / (
-             previousTime = currentTime;
              previous = current;
              elapsedTime.reset();
              return proportionalError * kp + integral * ki + derivative * kd;
