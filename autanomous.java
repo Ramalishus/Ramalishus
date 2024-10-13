@@ -37,7 +37,8 @@ public class OmarCompition extends LinearOpMode {
     double ki = 0.5;
     double kd = 0.5
     ElapsedTime elapsedTime = new ElapsedTime();
-    double previous = 0 
+    double previous = 0;
+    double previousTime = 0;
     
     @Override
     public void runOpMode() {
@@ -104,13 +105,14 @@ public class OmarCompition extends LinearOpMode {
              idle();
          }
          public double PIDController(double target,double current){
+             double currentTime = elapsedTime.Time();
              double proportionalError = target - current;
-             intergral += proportionalError * elapsedTime.time();
+             intergral += proportionalError * currentTime;
              double derivative = (current - previous) / (
-           
-
+             previousTime = currentTime;
+             previous = current;
              elapsedTime.reset();
-             return proportionalError * kp + integral * ki;
+             return proportionalError * kp + integral * ki + derivative * kd;
          }
      }
  }
